@@ -1,0 +1,286 @@
+/* mobile.css */
+body {
+  background: #fff;
+}
+
+/* pc전용 콘텐츠 비표시 */
+.pc-only {
+  display: none;
+}
+
+.container {
+  width: 100%;
+  outline: 1px solid #ccc;
+}
+
+#main-header {
+  position: relative;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  justify-content: center;
+}
+
+#main-header > h1 img {
+  width: 100px;
+}
+
+#gnb {
+  position: absolute;
+  background: #ddd;
+  width: 100%;
+  top: 70px;
+  padding: 20px 15px;
+  display: none;
+}
+
+#gnb.on {
+  display: block;
+  z-index: 100;
+}
+
+#gnb > ul {
+}
+
+/* 마지막 li를 제외한 li요소들 마진 추가 */
+#gnb > ul > li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+/* 
+#gnb > ul > li:last-child {
+  margin-bottom: 0px;
+} */
+
+#gnb > ul > li > a {
+  color: var(--text-color);
+}
+
+#gnb > ul > li > a:hover {
+  color: var(--main-color);
+}
+
+.right-menu {
+  display: flex;
+}
+
+#gnb-toggle-btn {
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  border-style: none;
+  background-color: #fff;
+}
+
+#gnb-toggle-btn:hover {
+  cursor: pointer;
+}
+
+
+/* swiper slider */
+.swiper {
+  width: 100%;
+  height: calc(100vh - 70px);
+  background: #ccc;
+}
+
+.swiper .swiper-slide.s1{
+  background-image: url(../images/main-visual01.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.swiper .swiper-slide.s2{
+  background-image: url(../images/main-visual02.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.swiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper .swiper-slide .title {
+  transform: translateY(-100px);
+}
+
+.swiper .swiper-slide .title h2 {
+  font-size: 36px;
+  color: #fff;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.swiper .swiper-slide .title h2 span {
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #fff;
+  display: none;
+}
+
+.swiper-pagination-bullet {
+  border-radius: 0;
+  border: 2px solid rgba(255, 255, 255, 0.75);
+  width: 14px;
+  height: 14px;
+  background-color: transparent;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background: #fff;
+  opacity: 1;
+}
+
+.swiper-pagination {
+  bottom: 40px !important;
+}
+
+/* 메인콘텐츠 */
+#content1.container img {
+  width: 100%;
+  height: 300px;
+}
+
+#content2.container img {
+  width: 100%;
+  height: 300px;
+}
+
+#content3.container img {
+  width: 100%;
+  height: 300px;
+}
+
+.text-box {
+  height: 290px;
+}
+
+.text-box-inner {
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 51px;
+
+}
+
+.text-box-inner > h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.text-box-inner > p {
+  margin-bottom: 40px;
+  font-size: 16px;
+}
+
+.detail-btn {
+  display: block;
+  margin-top: 40px;
+  width: 220px;
+  height: 48px;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+  text-align: center;
+  line-height: 48px;
+  font-size: 16px;
+  color: #333;
+  height: 50px;
+  margin: auto;
+}
+
+#about h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+#about p {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 50px;
+}
+
+#about {
+  height: 550px;
+  background: #ccc;
+  background-image: url(../images/content-img04.jpg);
+  background-size: cover;
+  background-position: center;
+  
+}
+
+#about .container {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+#about .text-box {
+  /* outline: 1px solid red; */
+  text-align: center;
+  color: #fff;
+}
+
+#about .detail-btn {
+  color: #fff;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  margin: auto;
+  margin-top: 40px;
+}
+
+.footer-menu {
+  display: none;
+}
+
+#line {
+  display: none;
+}
+
+.menu-box {
+  padding-top: 50px;
+}
+
+.sns-group {
+  text-align: center;
+}
+
+.sns-group li {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.footer-info {
+  margin: auto;
+  text-align: center;
+}
+
+.footer-info > img:first-child {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.footer-info-text .pc-footer {
+  display: none;
+}
+
+.mobile-footer {
+  margin-bottom: 25px;
+}
+
+.top-btn {
+  float: right;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #000;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  padding-top: 10px;
+}
